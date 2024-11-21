@@ -27,7 +27,7 @@ public class Presentation {
     }
 
     public List<String> getSlides() {
-        return new ArrayList<>(slides); // Return a copy to prevent external modification
+        return new ArrayList<>(slides); 
     }
 
     public void displaySlides() {
