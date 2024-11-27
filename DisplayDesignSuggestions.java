@@ -1,29 +1,7 @@
-package main;
-
-import models.*;
-import services.*;
-
-public class SmartPresentationAssistant {
-    public static void main(String[] args) {
-        
-        User user = new User("cookie123", "cookie@example.com");
-        System.out.println("Welcome, " + user.getUsername() + " (" + user.getEmail() + ")");
-
-      
-        Template template = new EducationTemplate();
-        template.applyTemplate();
-        Presentation presentation = new Presentation("My Science Project", template);
-
-        
-        presentation.addSlide("Introduction");
-        presentation.addSlide("Main Content");
-        presentation.addSlide("Conclusion");
-
-       
-        ContentGenerator generator = new SummaryContentGenerator();
-        generator.generateContent("Object-Oriented Programming Principles");
-
-       
-        presentation.displaySlides();
+        // Display Design Suggestions
+        System.out.println("\n\u001B[1m****************************************************************\u001B[0m");
+        System.out.println("\u001B[1mDesign Suggestions:\u001B[0m");
+        System.out.println("\u001B[1m****************************************************************\u001B[0m");
+        System.out.println(theme.suggestTheme(choice));
     }
 }
