@@ -1,38 +1,26 @@
-package models;
+class Slide {
+    private int slideNumber;
+    private String content;
 
-import java.time.LocalDateTime;
-
-public class User {
-    private String username;
-    private String email;
-    private LocalDateTime createdAt;
-
-    public User(String username, String email) {
-        this.username = username;
-        this.email = email;
-        this.createdAt = LocalDateTime.now(); 
+    public Slide(int slideNumber, String content) {
+        this.slideNumber = slideNumber;
+        this.content = content;
     }
 
-    public String getUsername() {
-        return username;
+    public int getSlideNumber() {
+        return slideNumber;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
+    public String getContent() {
+        return content;
     }
 
     @Override
     public String toString() {
-        return "User{" +
-                "username='" + username + '\'' +
-                ", email='" + email + '\'' +
-                ", createdAt=" + createdAt +
-                '}';
+        return "\u001B[33mSlide " + slideNumber + ": \u001B[0m" + content;  // Yellow slide number
     }
 }
+
+
 
 
