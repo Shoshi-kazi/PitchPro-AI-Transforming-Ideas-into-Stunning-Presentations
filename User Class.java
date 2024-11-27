@@ -1,12 +1,17 @@
-package models;
+class User {
+    private String username;
+    private String email;
 
-public class BusinessTemplate extends Template {
-    public BusinessTemplate() {
-        this.layout = "Business Style";
+    public User(String username, String email) {
+        this.username = username;
+        this.email = email;
     }
 
-    @Override
-    public void applyTemplate() {
-        System.out.println("Applying Business Template...");
+    public String getUsername() {
+        return username;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }
