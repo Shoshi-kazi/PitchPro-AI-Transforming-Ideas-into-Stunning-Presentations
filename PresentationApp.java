@@ -1,49 +1,19 @@
-package models;
+public class PresentationApp {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-import java.util.ArrayList;
-import java.util.List;
+        // Welcome message
+        System.out.println("\u001B[1m*************************************\u001B[0m");
+        System.out.println("\u001B[1mWelcome to the Presentation Generator!\u001B[0m");
+        System.out.println("\u001B[1m*************************************\u001B[0m");
 
-public class Presentation {
-    private String title;
-    private Template template;
-    private List<String> slides;
-
-    public Presentation(String title, Template template) {
-        this.title = title;
-        this.template = template;
-        this.slides = new ArrayList<>();
-    }
-
-    public void addSlide(String slide) {
-        slides.add(slide);
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public Template getTemplate() {
-        return template;
-    }
-
-    public List<String> getSlides() {
-        return new ArrayList<>(slides); 
-    }
-
-    public void displaySlides() {
-        System.out.println("Slides for: " + title);
-        for (String slide : slides) {
-            System.out.println("- " + slide);
-        }
-    }
-
-    @Override
-    public String toString() {
-        return "Presentation{" +
-                "title='" + title + '\'' +
-                ", template=" + template +
-                ", slides=" + slides +
-                '}';
+        // User input
+        System.out.println("\n\u001B[36mEnter your name: \u001B[0m");
+        String username = scanner.nextLine();
+        System.out.println("\u001B[36mEnter your email: \u001B[0m");
+        String email = scanner.nextLine();
+        
+        User user = new User(username, email);
+        System.out.println("\n\u001B[1mWelcome, " + user.getUsername() + "!\u001B[0m");
     }
 }
-
